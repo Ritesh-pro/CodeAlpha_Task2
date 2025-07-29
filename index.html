@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallerio - Premium Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Enhanced Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="landing-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+            </div>
+            <div class="particle-container"></div>
+        </div>
+        
+        <div class="landing-content">
+            <div class="logo-container">
+                <div class="logo-doodle">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="55" fill="none" stroke="#00cfff" stroke-width="3" class="logo-circle"/>
+                        <path d="M30 60 Q60 30 90 60 Q60 90 30 60" fill="none" stroke="#ff6b6b" stroke-width="2" class="logo-curve"/>
+                        <circle cx="45" cy="45" r="3" fill="#ffd93d" class="logo-dot"/>
+                        <circle cx="75" cy="45" r="3" fill="#ffd93d" class="logo-dot"/>
+                        <path d="M50 70 Q60 80 70 70" fill="none" stroke="#ff6b6b" stroke-width="2" class="logo-smile"/>
+                    </svg>
+                </div>
+                <h1 class="gallerio-title">
+                    <span class="title-text">Gallerio</span>
+                    <span class="title-subtitle">Premium Image Gallery</span>
+                </h1>
+            </div>
+            
+            <div class="doodle-container">
+                <div class="doodle doodle-1">🎨</div>
+                <div class="doodle doodle-2">📸</div>
+                <div class="doodle doodle-3">✨</div>
+                <div class="doodle doodle-4">🌟</div>
+                <div class="doodle doodle-5">🎭</div>
+                <div class="doodle doodle-6">🌈</div>
+            </div>
+            
+            <div class="landing-description">
+                <p>Discover the world through stunning photography</p>
+                <p>Curated collections for every mood and moment</p>
+            </div>
+            
+            <button id="enter-gallery-btn" class="enter-btn">
+                <span class="btn-text">Enter Gallery</span>
+                <span class="btn-icon">→</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Gallery Section -->
+    <div class="main-gallery" style="display: none;">
+        <header class="gallery-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="header-logo">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="27" fill="none" stroke="#00cfff" stroke-width="2"/>
+                            <path d="M15 30 Q30 15 45 30 Q30 45 15 30" fill="none" stroke="#ff6b6b" stroke-width="1.5"/>
+                            <circle cx="22" cy="22" r="2" fill="#ffd93d"/>
+                            <circle cx="38" cy="22" r="2" fill="#ffd93d"/>
+                            <path d="M25 35 Q30 40 35 35" fill="none" stroke="#ff6b6b" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h1 class="gallery-title">
+                        <span class="title-main">Gallerio</span>
+                        <span class="title-tagline">Premium Image Gallery</span>
+                    </h1>
+                </div>
+                
+                <nav class="gallery-nav">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search images..." class="search-input">
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    <span>All</span>
+                </button>
+                <button class="filter-btn" data-filter="nature">
+                    <i class="fas fa-tree"></i>
+                    <span>Nature</span>
+                </button>
+                <button class="filter-btn" data-filter="city">
+                    <i class="fas fa-city"></i>
+                    <span>City</span>
+                </button>
+                <button class="filter-btn" data-filter="animals">
+                    <i class="fas fa-paw"></i>
+                    <span>Animals</span>
+                </button>
+                <button class="filter-btn" data-filter="food">
+                    <i class="fas fa-utensils"></i>
+                    <span>Food</span>
+                </button>
+                <button class="filter-btn" data-filter="things">
+                    <i class="fas fa-cube"></i>
+                    <span>Things</span>
+                </button>
+                <button class="filter-btn" data-filter="ocean">
+                    <i class="fas fa-water"></i>
+                    <span>Ocean</span>
+                </button>
+                <button class="filter-btn" data-filter="ships">
+                    <i class="fas fa-ship"></i>
+                    <span>Ships</span>
+                </button>
+                <button class="filter-btn" data-filter="wallpapers">
+                    <i class="fas fa-image"></i>
+                    <span>Wallpapers</span>
+                </button>
+                <button class="filter-btn" data-filter="marvels">
+                    <i class="fas fa-star"></i>
+                    <span>Marvels</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-item" data-category="nature">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Mountain Landscape</h3>
+                        <p>Nature • Landscape</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain Landscape">
+            </div>
+            <div class="gallery-item" data-category="city">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Urban Skyline</h3>
+                        <p>City • Architecture</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d136b79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Urban Skyline">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Forest Path</h3>
+                        <p>Nature • Forest</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest Path">
+            </div>
+            <div class="gallery-item" data-category="animals">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Wild Fox</h3>
+                        <p>Animals • Wildlife</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wild Fox">
+            </div>
+            <div class="gallery-item" data-category="city">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>City Lights</h3>
+                        <p>City • Night</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="City Lights">
+            </div>
+            <div class="gallery-item" data-category="animals">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Eagle Portrait</h3>
+                        <p>Animals • Birds</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Eagle Portrait">
+            </div>
+            <div class="gallery-item" data-category="food">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Gourmet Dish</h3>
+                        <p>Food • Cuisine</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Gourmet Dish">
+            </div>
+            <div class="gallery-item" data-category="food">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Fresh Ingredients</h3>
+                        <p>Food • Fresh</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?q=80&w=800&auto=format&fit=crop" alt="Fresh Ingredients">
+            </div>
+            <div class="gallery-item" data-category="things">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Vintage Camera</h3>
+                        <p>Things • Vintage</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=800&auto=format&fit=crop" alt="Vintage Camera">
+            </div>
+            <div class="gallery-item" data-category="ocean">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Ocean Waves</h3>
+                        <p>Ocean • Waves</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Ocean Waves">
+            </div>
+            <div class="gallery-item" data-category="ships">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Sailing Ship</h3>
+                        <p>Ships • Sailing</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=800&auto=format&fit=crop" alt="Sailing Ship">
+            </div>
+            <div class="gallery-item" data-category="wallpapers">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Starry Night</h3>
+                        <p>Wallpapers • Space</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop" alt="Starry Night">
+            </div>
+            <div class="gallery-item" data-category="marvels">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Ancient Temple</h3>
+                        <p>Marvels • Architecture</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1519121789244-0a5ed2b7a6b3?q=80&w=800&auto=format&fit=crop" alt="Ancient Temple">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Sunset Valley</h3>
+                        <p>Nature • Sunset</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="Sunset Valley">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Mountain Lake</h3>
+                        <p>Nature • Lake</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=800&auto=format&fit=crop" alt="Mountain Lake">
+            </div>
+            <div class="gallery-item" data-category="city">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Modern Architecture</h3>
+                        <p>City • Modern</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Modern Architecture">
+            </div>
+            <div class="gallery-item" data-category="city">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Urban Street</h3>
+                        <p>City • Street</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=800&auto=format&fit=crop" alt="Urban Street">
+            </div>
+            <div class="gallery-item" data-category="animals">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Lion Portrait</h3>
+                        <p>Animals • Wildlife</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop" alt="Lion Portrait">
+            </div>
+            <div class="gallery-item" data-category="animals">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Elephant Family</h3>
+                        <p>Animals • Wildlife</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?q=80&w=800&auto=format&fit=crop" alt="Elephant Family">
+            </div>
+            <div class="gallery-item" data-category="food">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Artisan Bread</h3>
+                        <p>Food • Bakery</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=800&auto=format&fit=crop" alt="Artisan Bread">
+            </div>
+            <div class="gallery-item" data-category="food">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Fresh Fruits</h3>
+                        <p>Food • Healthy</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?q=80&w=800&auto=format&fit=crop" alt="Fresh Fruits">
+            </div>
+            <div class="gallery-item" data-category="things">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Vintage Books</h3>
+                        <p>Things • Vintage</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=800&auto=format&fit=crop" alt="Vintage Books">
+            </div>
+            <div class="gallery-item" data-category="things">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Antique Clock</h3>
+                        <p>Things • Antique</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=800&auto=format&fit=crop" alt="Antique Clock">
+            </div>
+            <div class="gallery-item" data-category="ocean">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Deep Blue</h3>
+                        <p>Ocean • Deep</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?q=80&w=800&auto=format&fit=crop" alt="Deep Blue">
+            </div>
+            <div class="gallery-item" data-category="ocean">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Coastal Rocks</h3>
+                        <p>Ocean • Coast</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop" alt="Coastal Rocks">
+            </div>
+            <div class="gallery-item" data-category="ships">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Modern Yacht</h3>
+                        <p>Ships • Luxury</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop" alt="Modern Yacht">
+            </div>
+            <div class="gallery-item" data-category="ships">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Fishing Boat</h3>
+                        <p>Ships • Fishing</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=800&auto=format&fit=crop" alt="Fishing Boat">
+            </div>
+            <div class="gallery-item" data-category="wallpapers">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Abstract Art</h3>
+                        <p>Wallpapers • Abstract</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Abstract Art">
+            </div>
+            <div class="gallery-item" data-category="wallpapers">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Geometric Pattern</h3>
+                        <p>Wallpapers • Geometric</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop" alt="Geometric Pattern">
+            </div>
+            <div class="gallery-item" data-category="marvels">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Ancient Ruins</h3>
+                        <p>Marvels • History</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=800&auto=format&fit=crop" alt="Ancient Ruins">
+            </div>
+            <div class="gallery-item" data-category="marvels">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h3>Natural Wonder</h3>
+                        <p>Marvels • Nature</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="Natural Wonder">
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-background"></div>
+        <div class="lightbox-container">
+            <div class="lightbox-header">
+                <div class="lightbox-info">
+                    <h3 id="lightbox-title">Image Title</h3>
+                    <p id="lightbox-category">Category</p>
+                </div>
+                <div class="lightbox-controls">
+                    <button class="control-btn like-btn" id="lightbox-like">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="control-btn download-btn" id="lightbox-download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="control-btn close-btn" id="lightbox-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="lightbox-content">
+                <button class="nav-btn prev-btn" id="lightbox-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img class="lightbox-image" id="lightbox-img">
+                <button class="nav-btn next-btn" id="lightbox-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="lightbox-footer">
+                <div class="image-counter">
+                    <span id="current-index">1</span> / <span id="total-images">1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
